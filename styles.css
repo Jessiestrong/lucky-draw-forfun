@@ -1,0 +1,153 @@
+/* 基础样式 */
+body {
+    background: linear-gradient(135deg, #ffccf9, #ffb6c1);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-selector button {
+    padding: 10px 20px;
+    margin: 5px;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.language-selector button:hover {
+    background: #ff3b2f;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #ff3b2f;
+    margin-bottom: 10px;
+}
+
+#subtitle {
+    font-size: 24px;
+    color: #ff6f61;
+    margin-bottom: 30px;
+}
+
+/* 双手样式 */
+.hands-container {
+    position: relative;
+    margin: 50px auto;
+    width: 400px;
+    height: 400px;
+}
+
+.left-hand, .right-hand {
+    position: absolute;
+    width: 80px;
+    height: 200px;
+    background: #ffd7b5;
+    border-radius: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.left-hand {
+    left: 0;
+    transform: rotate(-20deg);
+}
+
+.right-hand {
+    right: 0;
+    transform: rotate(20deg);
+}
+
+/* 动态签筒 */
+.vase-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    perspective: 1000px;
+}
+
+.vase {
+    width: 150px;
+    height: 250px;
+    background: linear-gradient(45deg, #ff6f61, #ff3b2f);
+    border-radius: 30px;
+    position: relative;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* 签的初始状态 */
+.sticks {
+    position: absolute;
+    top: -180px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 120px;
+}
+
+.stick {
+    width: 20px;
+    height: 180px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* 按钮样式 */
+#drawBtn {
+    padding: 15px 40px;
+    font-size: 18px;
+    background: #ff3b2f;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#drawBtn:hover {
+    transform: scale(1.05);
+    background: #ff6f61;
+}
+
+/* 结果样式 */
+.result {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 500px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 动画关键帧 */
+@keyframes shake {
+    0% { transform: translate(0,0) rotate(0); }
+    25% { transform: translate(10px,15px) rotate(3deg); }
+    50% { transform: translate(-10px,-10px) rotate(-3deg); }
+    75% { transform: translate(8px,-5px) rotate(2deg); }
+    100% { transform: translate(0,0) rotate(0); }
+}
+
+@keyframes fallDown {
+    0% { transform: translateY(-200px) rotate(0); }
+    100% { transform: translateY(0) rotate(360deg); }
+}

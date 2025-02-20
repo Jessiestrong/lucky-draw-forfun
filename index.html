@@ -1,1 +1,38 @@
-index
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国际妇女节抽签系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="language-selector">
+        <button onclick="changeLanguage('zh-CN')">中文简体</button>
+        <button onclick="changeLanguage('zh-TW')">中文繁體</button>
+        <button onclick="changeLanguage('en')">English</button>
+    </div>
+    <div class="container">
+        <h1 id="title">热烈庆祝国际三八妇女节</h1>
+        <p id="subtitle">Celebrating International Women's Day</p>
+        
+        <!-- 双手和签筒容器 -->
+        <div class="hands-container">
+            <div class="left-hand"></div>
+            <div class="vase-container">
+                <div class="vase">
+                    <div class="sticks">
+                        <div class="stick"></div> <!-- 重复多个stick -->
+                        <!-- 此处自动生成10根签 -->
+                    </div>
+                </div>
+            </div>
+            <div class="right-hand"></div>
+        </div>
+
+        <button id="drawBtn" aria-label="摇一摇抽签">摇一摇抽签</button>
+        <div id="result" class="result" role="alert"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
